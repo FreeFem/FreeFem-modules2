@@ -9,23 +9,14 @@
           <div id="sideNavigation">
             <div class="categoriesArea">
               <i class="fas fa-tag"></i>
-              <div class="categories">
-                <label class="catContainer solid">solid
-                  <input type="checkbox">
-                </label>
-                <label class="catContainer electromagnetism">electromagnetism
-                  <input type="checkbox">
-                </label>
-                <label class="catContainer academic">academic
-                  <input type="checkbox">
-                </label>
-                <label class="catContainer validated">validated
-                  <input type="checkbox">
-                </label>
-                <label class="catContainer fluid">fluid
-                  <input type="checkbox">
-                </label>
-              </div>
+              <!-- <label for="choices-multiple-remove-button">With remove button</label> -->
+              <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
+                <option value="solid" id="solid">solid</option>
+                <option value="electromagnetism" id="electromagnetism">electromagnetism</option>
+                <option value="academic" id="academic">academic</option>
+                <option value="validated" id="validated">validated</option>
+                <option value="fluid" id="fluid">fluid</option>
+              </select>
             </div>
             <div class="searchArea">
               <label>
@@ -47,17 +38,22 @@
           <div id="algoDisplay">
             <h2>Title</h2>
             <p>Description</p>
-            <div id="algoCode">CODE</div>
+            <div id="algoCode">
+              <code><pre>code</pre></code>
+            </div>
             <div id="algoResult">
-              <h2>Algo name</h2>
+              <h3>Algo name</h3>
               <div id="algoGraphic">Graphic representation</div>
             </div>
           </div>
         </section>
 
-        {% include footer.html %}
-
         <script src="js/openNav.js"></script>
-        <script src="js/choices.min.js"></script>
+        <script src="js/choices.js"></script>
+        <script>
+          var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+            removeItemButton: true,
+          });
+        </script>
     </body>
 </html>
