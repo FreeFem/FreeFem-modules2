@@ -1,13 +1,36 @@
 <!doctype html>
 <html>
     <head>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    CommonHTML: { linebreaks: { automatic: true } },
+    "HTML-CSS": { linebreaks: { automatic: true } },
+    SVG: { linebreaks: { automatic: true } },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    displayAlign: "left"
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/Symbole.png" type="image/png">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900" rel="stylesheet">
 	<!-- Include Choices CSS -->
 	<link rel="stylesheet" href="css/choices.min.css">
+	<script src="http://localhost:4001/js/moduleCategories.js"></script>
 	<title>FREEFEM++ - Modules</title>
 </head>
 
@@ -35,7 +58,7 @@
           <div id="sideNavigation">
             <div class="categoriesArea">
               <i class="fas fa-tag"></i>
-              <!-- <label for="choices-multiple-remove-button">With remove button</label> -->
+
               <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
                 <option value="solid" id="solid">solid</option>
                 <option value="electromagnetism" id="electromagnetism">electromagnetism</option>
@@ -44,29 +67,40 @@
                 <option value="fluid" id="fluid">fluid</option>
               </select>
             </div>
+
             <div class="searchArea">
               <label>
                 <i class="fas fa-search"></i>
                 <input type="search" placeholder="Search">
               </label>
             </div>
+
             <div class="modulesList" id="modulesList">
-              <a href="#">Elasticity</a>
+              <!-- <a href="#">Elasticity</a>
               <a href="#">Helmoltz</a>
               <a href="#">Magnetostatic</a>
               <a href="#">Maxwell waveguide boundary conditions</a>
               <a href="#">Poisson</a>
               <a href="#">Steady Navier-Stokes</a>
               <a href="#">Stokes</a>
-              <a href="#">Wentzel</a>
+              <a href="#">Wentzel</a> -->
+
+              <ul id="menu">
+              <li><a href="http://localhost:4001/">Home</a></li>
+              
+            </ul>
             </div>
           </div>
+
           <div id="algoDisplay">
             <h2>Title</h2>
+
             <p>Description</p>
+
             <div id="algoCode">
               <code><pre>code</pre></code>
             </div>
+
             <div id="algoResult">
               <h3>Algo name</h3>
               <div id="algoGraphic">Graphic representation</div>
