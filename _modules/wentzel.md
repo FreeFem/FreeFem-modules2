@@ -1,7 +1,6 @@
 ---
 name: Wentzel
 category: academic
-layout: module
 ---
 
 # Wentzel

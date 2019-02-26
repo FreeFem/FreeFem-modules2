@@ -1,7 +1,6 @@
 ---
 name: "Maxwell waveguide boundary conditions"
 category: "electromagnetism, academic"
-layout: module
 ---
 
 # maxwellWaveguideBC

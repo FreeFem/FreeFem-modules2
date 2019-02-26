@@ -24,10 +24,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* html, body {
-  height: 100%;
-} */
-
 body > section {
     border-bottom: 0.125rem solid #EFEFEF;
 }
@@ -35,6 +31,10 @@ body > section {
 a {
     text-decoration: none;
     color: #00007F;
+}
+
+a:hover {
+  font-weight: 700;
 }
 
 /** HEADER **/
@@ -143,9 +143,13 @@ header a.icon {
   margin: .3rem 0;
 }
 
+.hidden {
+  display: none;
+}
+
 #modulesList li {
   list-style-type: none;
-  margin: .5rem 0;
+  margin: .7rem 0;
 }
 
 /**  ALGORITHM DISPLAY **/
@@ -160,6 +164,7 @@ header a.icon {
   margin: 0;
   background-color: #F7F7F9;
   padding: 15px;
+  font-weight: 700;
 }
 
 #algoDisplay p {

@@ -1,7 +1,6 @@
 ---
 name: Magnetostatic
 category: electromagnetism
-layout: module
 ---
 
 # Stokes

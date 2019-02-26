@@ -32,7 +32,7 @@
                   <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
                   {% for module in site.modules %}
                   <li>
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ module.url}}">
+                    <a href="#" onclick="fetchModule(event, '{{ site.url }}{{ site.baseurl }}{{ module.url}}')">
                       {{ module.name }}
                     </a>
                     <span class="hidden">{{ module.category }}</span>
@@ -55,6 +55,24 @@
           var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
             removeItemButton: true,
           });
+        </script>
+        <script>
+          function fetchModule(e, url) {
+            e.preventDefault();
+            fetch(url)
+            .then(function(response) {
+              return response.text()
+            })
+            .then(function(html) {
+              const main = document.getElementById('algoDisplay')
+              main.innerHTML = html;
+              document.scrollTop = 0
+              MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            })
+            .catch(function(err) {
+              console.log('Failed to fetch page: ', err);
+            });
+          }
         </script>
     </body>
 </html>

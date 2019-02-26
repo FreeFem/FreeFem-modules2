@@ -1,7 +1,6 @@
 ---
 name: Elasticity
 category: solid
-layout: index
 ---
 
 # Elasticity
