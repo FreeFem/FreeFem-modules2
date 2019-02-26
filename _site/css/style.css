@@ -57,6 +57,10 @@ header img {
     margin: 0 .5rem;
 }
 
+header #headerSymbol {
+  display: none;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -137,6 +141,11 @@ header a.icon {
 
 #modulesList a {
   margin: .3rem 0;
+}
+
+#modulesList li {
+  list-style-type: none;
+  margin: .5rem 0;
 }
 
 /**  ALGORITHM DISPLAY **/

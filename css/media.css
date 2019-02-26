@@ -1,34 +1,37 @@
 @media screen and (max-width:1200px) {
-
+  header {
+    justify-content: flex-start !important;
+  }
+  header #headerLogo {
+    display: none;
+  }
+  header #headerSymbol {
+    display: flex !important;
+    margin: 0 .5rem !important;
+  }
 }
 
 /** FOR TABLETS **/
 @media screen and (max-width:800px) {
-  #main {
-    flex-direction: column !important;
+
+}
+
+/** FOR MOBILE PHONES **/
+@media screen and (max-width:500px) {
+  html, body {
+    height: 100% !important;
   }
-  #intro {
-    order: 1;
-    width: 100% !important;
-    height: unset !important;
-    margin-bottom: 3.75rem !important;
-    padding-left: 0 !important;
+  header {
+    justify-content: space-between !important;
   }
-  #demo {
-    order: 2;
-    width: 100% !important;
+  header img {
+    margin: 0 1.25rem !important;
   }
-  #blank video {
-    width: 100% !important;
-  }
-  #articles {
+  header #headerLogo {
     display: block !important;
   }
-  #articles article {
-    margin-bottom: 1.875rem !important;
-  }
-  #artFirst, #artSecond {
-    margin-right: 0 !important;
+  header #headerSymbol {
+    display: none !important;
   }
   .top-nav {
     width: 0;
@@ -48,74 +51,15 @@
     float: right;
     display: block !important;
   }
-}
-
-/** FOR MOBILE PHONES **/
-@media screen and (max-width:500px) {
-  header img {
-    margin: 0 1.25rem !important;
-  }
   #main {
     padding: 1.25rem !important;
+    min-height: 100%;
   }
-  #demo {
-    flex-direction: column !important;
+  #sideNavigation {
     width: 100% !important;
+    border: none !important;
   }
-  #blank {
-    order: 1;
-    width: 100% !important;
-  }
-  #code {
-    order: 2;
-    width: 100% !important;
-    height: 100% !important;
-  }
-  aside {
-    flex-direction: column !important;
-    min-height: 15.625rem;
-  }
-  aside p {
-    margin: 0 !important;
-  }
-
-  #download {
-    margin: 0 !important;
-  }
-
-  #articles {
-    padding: 1.25rem !important;
-  }
-
-  #info {
-    flex-direction: column !important;
-  }
-
-  #events {
-    order: 1;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
-  #events h1 {
-    margin-left: 1.25rem;
-  }
-
-  .event-grid {
-    margin : 0 1.25rem !important;
-  }
-
-  #team {
-    order: 2;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
-  #team img {
-    height: 2.5rem !important;
-  }
-
-  footer {
-    flex-direction: column !important;
+  #algoDisplay {
+    display: none !important;
   }
 }
