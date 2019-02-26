@@ -170,11 +170,11 @@ header a.icon {
 
 #algoDisplay table {
   margin: 20px 40px;
-  border: 2px solid #EFEFEF;
+  background-color: #EFEFEF;
 }
 
-#algoDisplay thead {
-  margin: 0;
+#algoDisplay tbody  {
+  background-color: #FFF;
 }
 
 #algoDisplay table img {
