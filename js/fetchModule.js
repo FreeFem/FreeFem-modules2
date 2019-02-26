@@ -6,6 +6,8 @@ function fetchModule(e, url) {
   })
   .then(function(html) {
     document.querySelector('#algoDisplay').innerHTML = html;
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   })
   .catch(function(err) {
