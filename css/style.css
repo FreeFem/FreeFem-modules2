@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    min-height: 100%;
+    height: 100%;
     width: 100%;
     max-width: 1440px;
     margin: auto;
@@ -24,9 +24,9 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-html, body {
+/* html, body {
   height: 100%;
-}
+} */
 
 body > section {
     border-bottom: 0.125rem solid #EFEFEF;
@@ -90,6 +90,11 @@ header a.icon {
   border-right: 0.125rem solid #EFEFEF;
 }
 
+.side-nav {
+  position: sticky;
+  top: 5.3rem;
+}
+
 /** CATEGORIES TAGS **/
 #sideNavigation .categoriesArea {
   background-color: #FFF;
@@ -141,7 +146,7 @@ header a.icon {
   background-color: #FFF;
 }
 
-#algoDisplay > h2 {
+#algoDisplay h1, #algoDisplay h2, #algoDisplay h3 {
   margin: 0;
   background-color: #F7F7F9;
   padding: 15px;

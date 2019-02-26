@@ -24,28 +24,28 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="img/Symbole.png" type="image/png">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="http://localhost:4001/img/Symbole.png" type="image/png">
+	<link rel="stylesheet" href="http://localhost:4001/css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900" rel="stylesheet">
 	<!-- Include Choices CSS -->
-	<link rel="stylesheet" href="css/choices.min.css">
-	<script src="http://localhost:4000/js/moduleCategories.js"></script>
+	<link rel="stylesheet" href="http://localhost:4001/css/choices.min.css">
+	<script src="http://localhost:4001/js/moduleCategories.js"></script>
 	<title>FREEFEM++ - Modules</title>
 </head>
 
 
     <body>
         <header>
-	<a href="http://localhost:4000"><img src="img/FreeFem_Modules.svg" alt="Logo de FreeFem++"/></a>
+	<a href="http://localhost:4001"><img src="http://localhost:4001/img/FreeFem_Modules.svg" alt="Logo de FreeFem++"/></a>
 
 	<nav id="topNav" class="top-nav">
 		<a href="https://freefem.org/" target="_blank">HOME</a>
 		<a href="https://doc.freefem.org" target="_blank">DOCUMENTATION</a>
 		<!-- <a href="https://modules.freefem.org/" target="_blank">MODULES</a> -->
 		<a href="https://github.com/FreeFem" target="_blank">SOURCE CODE</a>
-		<a href="#events" onclick="openNav()">EVENTS</a>
-		<a href="tryit.html">TRY IT ONLINE</a>
+		<a href="https://freefem.org/index.html#events" onclick="openNav()">EVENTS</a>
+		<a href="https://freefem.org/tryit.html">TRY IT ONLINE</a>
 		<a href="#" id="donate">DONATE</a>
 	</nav>
 	<a href="javascript:void(0);" class="icon" onclick="openNav()">
@@ -56,116 +56,100 @@
 
         <section id="main" class="modulesMain">
           <div id="sideNavigation">
-            <div class="categoriesArea">
-              <i class="fas fa-tag"></i>
+            <div class="side-nav">
+              <div class="categoriesArea">
+                <i class="fas fa-tag"></i>
 
-              <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
-                <option value="solid" id="solid">solid</option>
-                <option value="electromagnetism" id="electromagnetism">electromagnetism</option>
-                <option value="academic" id="academic">academic</option>
-                <option value="validated" id="validated">validated</option>
-                <option value="fluid" id="fluid">fluid</option>
-              </select>
-            </div>
+                <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
+                  <option value="solid" id="solid">solid</option>
+                  <option value="electromagnetism" id="electromagnetism">electromagnetism</option>
+                  <option value="academic" id="academic">academic</option>
+                  <option value="validated" id="validated">validated</option>
+                  <option value="fluid" id="fluid">fluid</option>
+                </select>
+              </div>
 
-            <div class="searchArea">
-              <label>
-                <i class="fas fa-search"></i>
-                <input type="search" placeholder="Search">
-              </label>
-            </div>
+              <div class="searchArea">
+                <label>
+                  <i class="fas fa-search"></i>
+                  <input type="search" placeholder="Search">
+                </label>
+              </div>
 
-            <div class="modulesList" id="modulesList">
-              <!-- <a href="#">Elasticity</a>
-              <a href="#">Helmoltz</a>
-              <a href="#">Magnetostatic</a>
-              <a href="#">Maxwell waveguide boundary conditions</a>
-              <a href="#">Poisson</a>
-              <a href="#">Steady Navier-Stokes</a>
-              <a href="#">Stokes</a>
-              <a href="#">Wentzel</a> -->
+              <div class="modulesList" id="modulesList">
+                <ul id="menu">
+                  <li><a href="http://localhost:4001/">Home</a></li>
+                  
+                  <li>
+                    <a href="http://localhost:4001/modules/elasticity/">
+                      Elasticity
+                    </a>
+                    <span class="hidden">solid</span>
+                  </li>
+                  
+                  <li>
+                    <a href="http://localhost:4001/modules/helmoltz/">
+                      Helmoltz
+                    </a>
+                    <span class="hidden">electromagnetism</span>
+                  </li>
+                  
+                  <li>
+                    <a href="http://localhost:4001/modules/magnetostatic/">
+                      Magnetostatic
+                    </a>
+                    <span class="hidden">electromagnetism</span>
+                  </li>
+                  
+                  <li>
+                    <a href="http://localhost:4001/modules/maxwellWaveguideBC/">
+                      Maxwell waveguide boundary conditions
+                    </a>
+                    <span class="hidden">electromagnetism, academic</span>
+                  </li>
+                  
+                  <li>
+                    <a href="http://localhost:4001/modules/poisson/">
+                      Poisson
+                    </a>
+                    <span class="hidden">academic, validated</span>
+                  </li>
+                  
+                  <li>
+                    <a href="http://localhost:4001/modules/steadyNS/">
+                      Steady Navier-Stokes
+                    </a>
+                    <span class="hidden">fluid</span>
+                  </li>
+                  
+                  <li>
+                    <a href="http://localhost:4001/modules/stokes/">
+                      Stokes
+                    </a>
+                    <span class="hidden">fluid</span>
+                  </li>
+                  
+                  <li>
+                    <a href="http://localhost:4001/modules/wentzel/">
+                      Wentzel
+                    </a>
+                    <span class="hidden">academic</span>
+                  </li>
+                  
+                </ul>
+              </div>
 
-              <ul id="menu">
-              <li><a href="http://localhost:4000/">Home</a></li>
-              
-              <li>
-                <a href="http://localhost:4000/modules/elasticity/">
-                  Elasticity
-                </a>
-                <span class="hidden">solid</span>
-              </li>
-              
-              <li>
-                <a href="http://localhost:4000/modules/helmoltz/">
-                  Helmoltz
-                </a>
-                <span class="hidden">electromagnetism</span>
-              </li>
-              
-              <li>
-                <a href="http://localhost:4000/modules/magnetostatic/">
-                  Magnetostatic
-                </a>
-                <span class="hidden">electromagnetism</span>
-              </li>
-              
-              <li>
-                <a href="http://localhost:4000/modules/maxwellWaveguideBC/">
-                  Maxwell waveguide boundary conditions
-                </a>
-                <span class="hidden">electromagnetism, academic</span>
-              </li>
-              
-              <li>
-                <a href="http://localhost:4000/modules/poisson/">
-                  Poisson
-                </a>
-                <span class="hidden">academic, validated</span>
-              </li>
-              
-              <li>
-                <a href="http://localhost:4000/modules/steadyNS/">
-                  Steady Navier-Stokes
-                </a>
-                <span class="hidden">fluid</span>
-              </li>
-              
-              <li>
-                <a href="http://localhost:4000/modules/stokes/">
-                  Stokes
-                </a>
-                <span class="hidden">fluid</span>
-              </li>
-              
-              <li>
-                <a href="http://localhost:4000/modules/wentzel/">
-                  Wentzel
-                </a>
-                <span class="hidden">academic</span>
-              </li>
-              
-            </ul>
             </div>
           </div>
 
           <div id="algoDisplay">
-            <h2>Title</h2>
+            
 
-            <p>Description</p>
-
-            <div id="algoCode">
-              <code><pre>code</pre></code>
-            </div>
-
-            <div id="algoResult">
-              <h3>Algo name</h3>
-              <div id="algoGraphic">Graphic representation</div>
-            </div>
           </div>
         </section>
 
-        <script src="js/openNav.js"></script>
-        <script src="js/choices.js"></script>
+        <script src="http://localhost:4001/js/openNav.js"></script>
+        <script src="http://localhost:4001/js/choices.js"></script>
         <script>
           var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
             removeItemButton: true,

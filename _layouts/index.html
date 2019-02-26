@@ -7,67 +7,50 @@
 
         <section id="main" class="modulesMain">
           <div id="sideNavigation">
-            <div class="categoriesArea">
-              <i class="fas fa-tag"></i>
+            <div class="side-nav">
+              <div class="categoriesArea">
+                <i class="fas fa-tag"></i>
 
-              <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
-                <option value="solid" id="solid">solid</option>
-                <option value="electromagnetism" id="electromagnetism">electromagnetism</option>
-                <option value="academic" id="academic">academic</option>
-                <option value="validated" id="validated">validated</option>
-                <option value="fluid" id="fluid">fluid</option>
-              </select>
-            </div>
+                <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
+                  <option value="solid" id="solid">solid</option>
+                  <option value="electromagnetism" id="electromagnetism">electromagnetism</option>
+                  <option value="academic" id="academic">academic</option>
+                  <option value="validated" id="validated">validated</option>
+                  <option value="fluid" id="fluid">fluid</option>
+                </select>
+              </div>
 
-            <div class="searchArea">
-              <label>
-                <i class="fas fa-search"></i>
-                <input type="search" placeholder="Search">
-              </label>
-            </div>
+              <div class="searchArea">
+                <label>
+                  <i class="fas fa-search"></i>
+                  <input type="search" placeholder="Search">
+                </label>
+              </div>
 
-            <div class="modulesList" id="modulesList">
-              <!-- <a href="#">Elasticity</a>
-              <a href="#">Helmoltz</a>
-              <a href="#">Magnetostatic</a>
-              <a href="#">Maxwell waveguide boundary conditions</a>
-              <a href="#">Poisson</a>
-              <a href="#">Steady Navier-Stokes</a>
-              <a href="#">Stokes</a>
-              <a href="#">Wentzel</a> -->
+              <div class="modulesList" id="modulesList">
+                <ul id="menu">
+                  <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
+                  {% for module in site.modules %}
+                  <li>
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ module.url}}">
+                      {{ module.name }}
+                    </a>
+                    <span class="hidden">{{ module.category }}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
 
-              <ul id="menu">
-              <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
-              {% for module in site.modules %}
-              <li>
-                <a href="{{ site.url }}{{ site.baseurl }}{{ module.url}}">
-                  {{ module.name }}
-                </a>
-                <span class="hidden">{{ module.category }}</span>
-              </li>
-              {% endfor %}
-            </ul>
             </div>
           </div>
 
           <div id="algoDisplay">
-            <h2>Title</h2>
-
-            <p>Description</p>
-
-            <div id="algoCode">
-              <code><pre>code</pre></code>
-            </div>
-
-            <div id="algoResult">
-              <h3>Algo name</h3>
-              <div id="algoGraphic">Graphic representation</div>
-            </div>
+            {{ content }}
           </div>
         </section>
 
-        <script src="js/openNav.js"></script>
-        <script src="js/choices.js"></script>
+        <script src="{{ site.url }}{{ site.baseurl }}/js/openNav.js"></script>
+        <script src="{{ site.url }}{{ site.baseurl }}/js/choices.js"></script>
         <script>
           var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
             removeItemButton: true,
