@@ -1,6 +1,7 @@
 ---
 name: Elasticity
 category: solid
+layout: module
 ---
 
 # Elasticity

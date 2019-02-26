@@ -1,6 +1,7 @@
 ---
 name: "Steady Navier-Stokes"
 category: "fluid"
+layout: module
 ---
 
 # Steady Navier-Stokes equations

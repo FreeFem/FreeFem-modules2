@@ -1,6 +1,7 @@
 ---
 name: Stokes
 category: fluid
+layout: module
 ---
 
 # Stokes

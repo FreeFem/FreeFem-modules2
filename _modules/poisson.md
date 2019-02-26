@@ -1,6 +1,7 @@
 ---
 name: Poisson
 category: academic, validated
+layout: module
 ---
 
 # Poisson
