@@ -1,7 +1,7 @@
 ---
 name: Helmoltz
 category: electromagnetism
-layout: module
+layout: index
 ---
 
 {% comment %}
