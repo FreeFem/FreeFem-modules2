@@ -32,7 +32,7 @@
                   <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
                   {% for module in site.modules %}
                   <li>
-                    <a href="#" onclick="fetchModule(event, '{{ site.url }}{{ site.baseurl }}{{ module.url}}')">
+                    <a href="#" onclick="fetchModule(event, '{{ site.url }}{{ site.baseurl }}{{ module.url}}', '{{ module.title }}')">
                       {{ module.name }}
                     </a>
                     <span class="hidden">{{ module.category }}</span>

@@ -31,6 +31,7 @@
 	<!-- Include Choices CSS -->
 	<link rel="stylesheet" href="http://localhost:4001/css/choices.min.css">
 	<script src="http://localhost:4001/js/moduleCategories.js"></script>
+	<script src="http://localhost:4001/js/fetchModule.js"></script>
 	<title>FREEFEM++ - Modules</title>
 </head>
 
@@ -82,56 +83,56 @@
                   <li><a href="http://localhost:4001/">Home</a></li>
                   
                   <li>
-                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/elasticity/')">
+                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/elasticity/', 'Elasticity')">
                       Elasticity
                     </a>
                     <span class="hidden">solid</span>
                   </li>
                   
                   <li>
-                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/helmoltz/')">
+                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/helmoltz/', 'Helmoltz')">
                       Helmoltz
                     </a>
                     <span class="hidden">electromagnetism</span>
                   </li>
                   
                   <li>
-                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/magnetostatic/')">
+                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/magnetostatic/', 'Magnetostatic')">
                       Magnetostatic
                     </a>
                     <span class="hidden">electromagnetism</span>
                   </li>
                   
                   <li>
-                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/maxwellWaveguideBC/')">
+                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/maxwellWaveguideBC/', 'Maxwellwaveguidebc')">
                       Maxwell waveguide boundary conditions
                     </a>
                     <span class="hidden">electromagnetism, academic</span>
                   </li>
                   
                   <li>
-                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/poisson/')">
+                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/poisson/', 'Poisson')">
                       Poisson
                     </a>
                     <span class="hidden">academic, validated</span>
                   </li>
                   
                   <li>
-                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/steadyNS/')">
+                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/steadyNS/', 'Steadyns')">
                       Steady Navier-Stokes
                     </a>
                     <span class="hidden">fluid</span>
                   </li>
                   
                   <li>
-                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/stokes/')">
+                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/stokes/', 'Stokes')">
                       Stokes
                     </a>
                     <span class="hidden">fluid</span>
                   </li>
                   
                   <li>
-                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/wentzel/')">
+                    <a href="#" onclick="fetchModule(event, 'http://localhost:4001/modules/wentzel/', 'Wentzel')">
                       Wentzel
                     </a>
                     <span class="hidden">academic</span>
@@ -155,24 +156,6 @@
           var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
             removeItemButton: true,
           });
-        </script>
-        <script>
-          function fetchModule(e, url) {
-            e.preventDefault();
-            fetch(url)
-            .then(function(response) {
-              return response.text()
-            })
-            .then(function(html) {
-              const main = document.getElementById('algoDisplay')
-              main.innerHTML = html;
-              document.scrollTop = 0
-              MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-            })
-            .catch(function(err) {
-              console.log('Failed to fetch page: ', err);
-            });
-          }
         </script>
     </body>
 </html>
