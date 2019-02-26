@@ -49,6 +49,7 @@ header {
     border-bottom: 0.125rem solid #EFEFEF;
     position: sticky;
   	top: 0;
+    z-index: 1;
 }
 
 header img {
@@ -146,35 +147,35 @@ header a.icon {
   background-color: #FFF;
 }
 
-#algoDisplay h1, #algoDisplay h2, #algoDisplay h3 {
+#algoDisplay h1, #algoDisplay h2, #algoDisplay h3, #algoDisplay h4, #algoDisplay h5, #algoDisplay h6 {
   margin: 0;
   background-color: #F7F7F9;
   padding: 15px;
 }
 
 #algoDisplay p {
-  margin-left: 20px;
-}
-
-#algoCode {
-  background-color: #F7F7F9;
   margin: 20px;
-  padding: 15px;
 }
 
-#algoCode pre {
-  margin: 0 !important;
+#algoDisplay figure.highlight {
+  background-color: #EFEFEF;
+  padding: 0 10px;
 }
 
-#algoResult {
-    border: 0.125rem solid #EFEFEF;
-    margin: 20px;
+#algoDisplay table {
+  margin: 20px 40px;
+  border: 2px solid #EFEFEF;
 }
 
-#algoResult > h3 {
+#algoDisplay thead {
   margin: 0;
-  background-color: #EFEFEF !important;
-  padding: 15px;
+}
+
+#algoDisplay table img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /** SCROLLBAR DESIGN **/
