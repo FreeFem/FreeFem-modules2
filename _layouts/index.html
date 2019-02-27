@@ -12,11 +12,11 @@
                 <i class="fas fa-tag"></i>
 
                 <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
-                  <option value="solid" id="solid" selected>solid</option>
-                  <option value="electromagnetism" id="electromagnetism">electromagnetism</option>
-                  <option value="academic" id="academic">academic</option>
-                  <option value="validated" id="validated">validated</option>
-                  <option value="fluid" id="fluid">fluid</option>
+                  <option value="solid" id="solid" selected>Solid</option>
+                  <option value="electromagnetism" id="electromagnetism">Electromagnetism</option>
+                  <option value="academic" id="academic">Academic</option>
+                  <option value="validated" id="validated">Validated</option>
+                  <option value="fluid" id="fluid">Fluid</option>
                 </select>
               </div>
 
@@ -53,8 +53,13 @@
         <script src="{{ site.url }}{{ site.baseurl }}/js/openNav.js"></script>
         <script src="{{ site.url }}{{ site.baseurl }}/js/choices.js"></script>
         <script>
-          var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
-            removeItemButton: true,
+          document.addEventListener('DOMContentLoaded', function() {
+            var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+              removeItemButton: true,
+              duplicateItemsAllowed: false,
+              paste: false,
+              position: 'below:'
+            });
           });
         </script>
     </body>
