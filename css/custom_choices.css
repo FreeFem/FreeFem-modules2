@@ -174,10 +174,7 @@
   margin-right: 0;
   margin-left: 3.75px;
 }
-.choices__list--multiple .choices__item.is-highlighted {
-  background-color: #00a5bb;
-  border: 1px solid #008fa1;
-}
+
 .is-disabled .choices__list--multiple .choices__item {
   background-color: #aaaaaa;
   border: 1px solid #919191;
