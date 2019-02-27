@@ -1,4 +1,12 @@
-function fetchModule(e, url, title) {
+window.addEventListener('popstate', function(event) {
+	if (history.state) {
+		fetchModule(event, history.state.url, history.state.title, true)
+		event.preventDefault()
+		event.stopPropagation()
+	}
+})
+
+function fetchModule(e, url, title, disableHistory) {
 	e.preventDefault()
 	fetch(url)
 		.then(function(response) {
@@ -18,7 +26,7 @@ function fetchModule(e, url, title) {
 			document.documentElement.scrollTop = 0
 
 			// Set history
-			window.history.pushState(null, title, url)
+			if (!disableHistory) history.pushState({url: url, title: title}, title, url)
 			document.title = "FREEFEM++ - " + title
 
 			// Relaunch MathJax
