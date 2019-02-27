@@ -109,12 +109,11 @@ header a.icon {
   flex-direction: row;
   align-items: center;
   margin: .5rem;
-  height: 1.875rem;
 }
 
 #sideNavigation .categoriesArea i {
   color: #00007F;
-  margin: .4rem;
+  margin: .375rem;
 }
 
 /** SEARCH AREA **/
