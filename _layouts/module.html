@@ -1,1 +1,60 @@
-{{ content }}
+<!doctype html>
+<html>
+    {% include head.html %}
+
+    <body>
+        {% include header.html %}
+
+        <section id="main" class="modulesMain">
+          <div id="sideNavigation">
+            <div class="side-nav">
+              <div class="categoriesArea">
+                <i class="fas fa-tag"></i>
+
+                <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
+                  <option value="solid" id="solid">solid</option>
+                  <option value="electromagnetism" id="electromagnetism">electromagnetism</option>
+                  <option value="academic" id="academic">academic</option>
+                  <option value="validated" id="validated">validated</option>
+                  <option value="fluid" id="fluid">fluid</option>
+                </select>
+              </div>
+
+              <div class="searchArea">
+                <label>
+                  <i class="fas fa-search"></i>
+                  <input type="search" placeholder="Search">
+                </label>
+              </div>
+
+              <div class="modulesList" id="modulesList">
+                <ul id="menu">
+                  <li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
+                  {% for module in site.modules %}
+                  <li>
+                    <a href="#" onclick="fetchModule(event, '{{ site.url }}{{ site.baseurl }}{{ module.url}}', '{{ module.title }}')">
+                      {{ module.name }}
+                    </a>
+                    <span class="hidden">{{ module.category }}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div id="algoDisplay">
+            {{ content }}
+          </div>
+        </section>
+
+        <script src="{{ site.url }}{{ site.baseurl }}/js/openNav.js"></script>
+        <script src="{{ site.url }}{{ site.baseurl }}/js/choices.js"></script>
+        <script>
+          var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+            removeItemButton: true,
+          });
+        </script>
+    </body>
+</html>
