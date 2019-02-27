@@ -104,11 +104,12 @@ header a.icon {
 /** CATEGORIES TAGS **/
 #sideNavigation .categoriesArea {
   background-color: #FFF;
-  border: 1px solid #00007F;
+  border: 0.0625rem solid #00007F;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: .5rem;
+  height: 1.875rem;
 }
 
 #sideNavigation .categoriesArea i {
@@ -119,17 +120,34 @@ header a.icon {
 /** SEARCH AREA **/
 #sideNavigation .searchArea {
   margin: .5rem;
-  padding: .2rem;
   background-color: #FFF;
-  border: 0.125rem solid #EFEFEF;
+  border: 0.0625rem solid #EFEFEF;
+  height: 1.875rem;
 }
 
 #sideNavigation .searchArea i {
   color: grey;
 }
 
-#sideNavigation .searchArea input {
-  border: none !important;
+#sideNavigation .search label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+#sideNavigation .search input {
+  padding: 5px 5px 5px 30px;
+  flex: 1 1 auto;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  color: #222;
+  background-color: white;
+}
+
+#sideNavigation .search svg {
+    height: 24px;
+    position: absolute;
 }
 
 /** MODULES LIST **/

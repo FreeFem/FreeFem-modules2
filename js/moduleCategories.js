@@ -44,10 +44,10 @@ onCategoryChange = (category, checked) => {
       categories.splice(index, 1)
   }
 
-  toogleCategories()
+  toggleCategories()
 }
 
-toogleCategories = () => {
+toggleCategories = () => {
   for (let i = 0; i < menu.children.length; i++) {
     const module = menu.children[i]
     if (module.children[0].innerHTML.includes("Home")) {
