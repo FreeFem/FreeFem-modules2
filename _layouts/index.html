@@ -12,11 +12,6 @@
                 <i class="fas fa-tag"></i>
 
                 <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
-                  <option value="solid" id="solid" selected>Solid</option>
-                  <option value="electromagnetism" id="electromagnetism">Electromagnetism</option>
-                  <option value="academic" id="academic">Academic</option>
-                  <option value="validated" id="validated">Validated</option>
-                  <option value="fluid" id="fluid">Fluid</option>
                 </select>
               </div>
 
@@ -38,7 +33,11 @@
                     </a>
                     <span class="hidden">{{ module.category }}</span>
                   </li>
+				  <script>
+				    addToTags('{{ module.category }}')
+				  </script>
                   {% endfor %}
+
                 </ul>
               </div>
 
@@ -55,6 +54,7 @@
         <script>
           document.addEventListener('DOMContentLoaded', function() {
             var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+			  choices: tags,
               removeItemButton: true,
               duplicateItemsAllowed: false,
               paste: false,
