@@ -35,7 +35,7 @@ a {
 }
 
 a:hover {
-  font-weight: 700;
+  color: #0000FF;
 }
 
 /** HEADER **/
@@ -101,26 +101,28 @@ header a.icon {
   top: 5.3rem;
 }
 
+.categoriesArea, .searchArea, .modulesList {
+  margin: .5rem .375rem .5rem .5rem;
+}
+
 /** CATEGORIES TAGS **/
 #sideNavigation .categoriesArea {
   background-color: #FFF;
-  border: 0.0625rem solid #00007F;
+  border: 1px solid #00007F;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: .5rem;
+  min-height: 1.875rem;
 }
 
 #sideNavigation .categoriesArea i {
   color: #00007F;
-  margin: .375rem;
+  margin: 7px;
 }
 
 /** SEARCH AREA **/
 #sideNavigation .searchArea {
-  margin: .5rem;
   background-color: #FFF;
-  border: 0.0625rem solid #EFEFEF;
   height: 1.875rem;
 }
 
@@ -136,12 +138,13 @@ header a.icon {
 }
 
 #sideNavigation .search input {
-  padding: 5px 5px 5px 30px;
+  padding: 0 4px 0 30px;
   flex: 1 1 auto;
   font-size: 1em;
   border: 1px solid #ddd;
   color: #222;
   background-color: white;
+  line-height: 1.75rem;
 }
 
 #sideNavigation .search svg {
@@ -153,7 +156,6 @@ header a.icon {
 #modulesList {
   display: flex;
   flex-direction: column;
-  margin: .5rem;
   overflow-y: scroll;
 }
 
