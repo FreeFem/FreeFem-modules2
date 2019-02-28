@@ -1,16 +1,13 @@
-testArray = []
 tags = []
 
 addToTags = (item) => {
   const items = item.split(', ')
 
   items.forEach(item => {
-    const index = testArray.indexOf(item)
-    if (index > -1)
+    const index = tags.find(x => x.value === item)
+    if (index)
     	return
 
-    // addCategory(item)
-	testArray.push(item)
     tags.push({
 		value: item,
 		label: item.charAt(0).toUpperCase() + item.substring(1),
@@ -20,63 +17,43 @@ addToTags = (item) => {
   })
 }
 
-// addCategory = (item) => {
-//   const select = document.getElementById('choices-multiple-remove-button')
-//
-//   const option = document.createElement('option')
-//   option.value = item
-//   option.id = item
-//
-//   const label = document.createElement('label')
-//   label.className = 'custom-control-label'
-//   label.htmlFor = item
-//   label.innerHTML = item
-//
-//   const input = document.createElement('input')
-//   input.className = 'custom-control-input'
-//   input.type = 'checkbox'
-//   input.checked = true
-//   input.id = item
-//   input.onchange = function() { onCategoryChange(item, input.checked) }
-//
-//   div.appendChild(input)
-//   div.appendChild(label)
-//
-//   categoriesDiv.appendChild(div)
-// }
+includesOnceOf = (string, array) => {
+	const length = array.length
 
-onCategoryChange = (category, checked) => {
-  if (checked) {
-    categories.push(category)
-  } else {
-    const index = categories.indexOf(category)
-    if (index > -1)
-      categories.splice(index, 1)
-  }
+	for (let i = 0; i < length; i++) {
+		if (string.includes(array[i])) {
+			return true
+		}
+	}
 
-  toggleCategories()
+	return false
 }
 
-toggleCategories = () => {
-  for (let i = 0; i < menu.children.length; i++) {
-    const module = menu.children[i]
-    if (module.children[0].innerHTML.includes("Home")) {
-      module.style.display = 'flex'
-      continue
-    }
+toggleTags = (value) => {
+	const usedTags = []
 
-    let category = module.children[1].innerHTML
-    category = category.toLowerCase()
+	for (let i = 0; i < value.target.children.length; i++) {
+		usedTags.push(value.target.children[i].value)
+	}
 
-    let show = false
-    for (let j = 0; j < categories.length; j++) {
-      if (category.includes(categories[j].toLowerCase()))
-        show = true
-    }
+	const menu = document.getElementById('menu')
 
-    if (show)
-      module.style.display = 'flex'
-    else
-      module.style.display = 'none'
-  }
+	if (usedTags.length === 0) {
+		for (let i = 0; i < menu.children.length; i++) {
+			const child = menu.children[i]
+			child.classList.remove('hidden')
+		}
+		return
+	}
+
+	for (let i = 0; i < menu.children.length; i++) {
+		const child = menu.children[i]
+		const moduleTags = child.children[1].innerHTML
+
+		if (includesOnceOf(moduleTags, usedTags)) {
+			child.classList.remove('hidden')
+		} else {
+			child.classList.add('hidden')
+		}
+	}
 }

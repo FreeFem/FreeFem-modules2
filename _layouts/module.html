@@ -32,10 +32,10 @@
                       {{ module.name }}
                     </a>
                     <span class="hidden">{{ module.category }}</span>
+					<script>
+					addToTags('{{ module.category }}')
+					</script>
                   </li>
-				  <script>
-				    addToTags('{{ module.category }}')
-				  </script>
                   {% endfor %}
                 </ul>
               </div>
@@ -60,6 +60,9 @@
               position: 'below:'
             });
           });
+
+		  const choices = document.getElementById('choices-multiple-remove-button')
+		  choices.addEventListener('change', toggleTags)
         </script>
     </body>
 </html>
