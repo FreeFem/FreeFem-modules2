@@ -63,6 +63,12 @@
 
 		  const choices = document.getElementById('choices-multiple-remove-button')
 		  choices.addEventListener('change', toggleTags)
+
+		  if (!history.state) {
+			  const url = window.location.href
+			  const title = '{{ page.title }}'
+			  history.pushState({url: url, title: title}, title, url)
+		  }
         </script>
     </body>
 </html>

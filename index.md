@@ -1,4 +1,4 @@
 ---
-title: FREEFEM++ - Modules
+title: Modules
 layout: index
 ---
