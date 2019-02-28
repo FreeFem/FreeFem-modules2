@@ -33,7 +33,7 @@
                 <ul id="menu">
                   {% for module in site.modules %}
                   <li>
-                    <a href="#" onclick="fetchModule(event, '{{ site.url }}{{ site.baseurl }}{{ module.url}}', '{{ module.title }}')">
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ module.url}}" onclick="fetchModule(event, '{{ site.url }}{{ site.baseurl }}{{ module.url}}', '{{ module.title }}')">
                       {{ module.name }}
                     </a>
                     <span class="hidden">{{ module.category }}</span>
