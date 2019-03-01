@@ -179,6 +179,7 @@ header a.icon {
   display: flex;
   flex-direction: column;
   background-color: #FFF;
+  overflow-y: scroll;
 }
 
 #algoDisplay h1, #algoDisplay h2, #algoDisplay h3, #algoDisplay h4, #algoDisplay h5, #algoDisplay h6 {
