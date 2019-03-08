@@ -4,7 +4,7 @@ category: electromagnetism, academic
 layout: module
 ---
 
-# maxwellWaveguideBC
+# Maxwell waveguide boundary conditions
 
 This module illustrates how to implement waveguide boundary conditions in Maxwell equations. So far it is done for 2D planar case in Cartezian and Axial (m = 0) cases. Waveguides modes and waveguides port are hardcoded.
 
