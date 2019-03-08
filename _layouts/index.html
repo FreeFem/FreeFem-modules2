@@ -11,7 +11,7 @@
         <div class="categoriesArea">
           <i class="fas fa-tag"></i>
 
-          <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Tags" multiple>
+          <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="Labels" multiple>
           </select>
         </div>
 
@@ -69,12 +69,26 @@
         removeItemButton: true,
         duplicateItemsAllowed: false,
         paste: false,
-        position: 'below:'
+        position: 'below:',
       });
-    });
 
-    const choices = document.getElementById('choices-multiple-remove-button')
-    choices.addEventListener('change', toggleTags)
+      const choices = document.getElementById('choices-multiple-remove-button')
+      const placeholder = document.getElementsByClassName('choices__input')
+      console.log(placeholder)
+
+      choices.addEventListener('change', toggleTags)
+      choices.addEventListener('addItem', function(event) {
+        if (multipleCancelButton.getValue(true).length > 0)
+          placeholder[1].style.setProperty('display', 'none');
+
+      }, false);
+
+      choices.addEventListener('removeItem', function(event) {
+        if (multipleCancelButton.getValue(true).length === 0)
+          placeholder[1].style.setProperty('display', '');
+          
+      }, false);
+    });
 
     if (!history.state) {
       const url = window.location.href
