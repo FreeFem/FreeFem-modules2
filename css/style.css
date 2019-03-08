@@ -123,7 +123,7 @@ header a.icon {
 /** CATEGORIES TAGS **/
 #sideNavigation .categoriesArea {
   background-color: #FFF;
-  border: 1px solid #00007F;
+  border: 1px solid #DDD;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -135,7 +135,7 @@ header a.icon {
 }
 
 #sideNavigation .categoriesArea i {
-  color: #DDD;
+  color: #00007F;
   margin: 7px;
 }
 
