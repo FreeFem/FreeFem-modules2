@@ -162,6 +162,10 @@ header a.icon {
   line-height: 1.75rem;
 }
 
+#sideNavigation .search input:focus {
+    border: 1px solid #00007F;
+}
+
 #sideNavigation .search svg {
   height: 24px;
   position: absolute;
