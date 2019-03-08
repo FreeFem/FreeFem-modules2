@@ -130,8 +130,12 @@ header a.icon {
   min-height: 1.875rem;
 }
 
+#sideNavigation .categoriesArea:focus-within {
+  border: 1px solid #00007F;
+}
+
 #sideNavigation .categoriesArea i {
-  color: #00007F;
+  color: #DDD;
   margin: 7px;
 }
 
@@ -169,6 +173,10 @@ header a.icon {
 #sideNavigation .search svg {
   height: 24px;
   position: absolute;
+}
+
+#sideNavigation .search svg g {
+    fill: #00007F;
 }
 
 /** MODULES LIST **/
