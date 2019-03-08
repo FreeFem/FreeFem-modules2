@@ -203,12 +203,12 @@ header a.icon {
 #algoDisplay h1, #algoDisplay h2, #algoDisplay h3, #algoDisplay h4, #algoDisplay h5, #algoDisplay h6 {
   margin: 0;
   background-color: #F7F7F9;
-  padding: 15px;
+  padding: 1rem;
   font-weight: 700;
 }
 
-#algoDisplay p {
-  margin: 20px;
+#algoDisplay p, .MathJax_Display {
+  margin: 1rem !important;
 }
 
 #algoDisplay figure.highlight {
