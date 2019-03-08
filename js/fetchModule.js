@@ -8,6 +8,13 @@ window.addEventListener('popstate', function(event) {
 
 function fetchModule(e, url, title, disableHistory) {
 	e.preventDefault()
+
+	let previousModule = document.getElementsByClassName("current")
+	if (previousModule.length > 0)
+		previousModule[0].classList.remove("current")
+
+	e.target.classList.add("current");
+
 	fetch(url)
 		.then(function(response) {
 			return response.text()

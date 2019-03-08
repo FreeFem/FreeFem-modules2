@@ -188,6 +188,15 @@ header a.icon {
 
 #modulesList a {
   margin: .3rem 0;
+  color: #444 !important;
+}
+
+#modulesList a:hover {
+  color: #0000FF !important;
+}
+
+#modulesList .current {
+  color: #00007F !important;
 }
 
 .hidden {

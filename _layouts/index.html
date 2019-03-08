@@ -74,20 +74,19 @@
 
       const choices = document.getElementById('choices-multiple-remove-button')
       const placeholder = document.getElementsByClassName('choices__input')
-      console.log(placeholder)
 
       choices.addEventListener('change', toggleTags)
+
       choices.addEventListener('addItem', function(event) {
         if (multipleCancelButton.getValue(true).length > 0)
           placeholder[1].style.setProperty('display', 'none');
-
       }, false);
 
       choices.addEventListener('removeItem', function(event) {
         if (multipleCancelButton.getValue(true).length === 0)
           placeholder[1].style.setProperty('display', '');
-          
       }, false);
+      
     });
 
     if (!history.state) {

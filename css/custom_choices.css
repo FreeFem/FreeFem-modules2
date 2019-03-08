@@ -286,12 +286,13 @@
 .choices__input {
   display: inline-block;
   vertical-align: baseline;
-  font-size: 12px;
+  font-size: 1rem;
   border: 0;
   border-radius: 0;
   max-width: 100%;
-  padding: 4px 10px;
-  margin: 2px
+  padding: 0.25rem 0;
+  margin: -1px;
+  color: #222;
 }
 .choices__input:focus {
   outline: 0;
