@@ -39,7 +39,7 @@
           <ul id="menu">
             {% for module in site.modules %}
             <li>
-              <a href="{{ site.url }}{{ site.baseurl }}{{ module.url}}" onclick="fetchModule(event, '{{ site.url }}{{ site.baseurl }}{{ module.url}}', '{{ module.title }}')">
+              <a href="{{ site.url }}{{ site.baseurl }}{{ module.url}}" onclick="fetchModule(event, '{{ site.url }}{{ site.baseurl }}{{ module.url}}', '{{ module.title }}')" {% if module.url == page.url  %} class="current" {% endif %}>
                 {{ module.name }}
               </a>
               <span class="hidden">{{ module.category }}</span>
@@ -85,7 +85,7 @@
         if (multipleCancelButton.getValue(true).length === 0)
           placeholder[1].style.setProperty('display', '');
       }, false);
-      
+
     });
 
     if (!history.state) {
