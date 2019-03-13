@@ -343,7 +343,19 @@ header a.icon {
   color: #00007F;
 }
 
-#home .header-github:hover, .header-github-stars:hover, .header-github-title {
+#home .header-github:hover {
+  color: #0000FF;
+}
+
+#home .header-github:hover > i {
+  color: #0000FF;
+}
+
+#home .header-github:hover > .header-github-title {
+  color: #0000FF;
+}
+
+#home .header-github:hover > .header-github-stars {
   color: #0000FF;
 }
 
