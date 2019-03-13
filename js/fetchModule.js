@@ -13,6 +13,8 @@ function fetchModule(e, url, title, disableHistory) {
 	if (previousModule.length > 0)
 		previousModule[0].classList.remove("current")
 
+	console.log(e.target)
+	console.log(e.target.classList)
 	e.target.classList.add("current");
 
 	fetch(url)
