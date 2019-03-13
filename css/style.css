@@ -312,7 +312,7 @@ header a.icon {
   grid-template-rows: 1.5rem 1.5rem;
   grid-template-columns: auto auto;
   align-items: center;
-  grid-gap: 0 0.25rem;
+  grid-gap: 0 0.5rem;
 }
 
 #home .header-github i {
