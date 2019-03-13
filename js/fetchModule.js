@@ -13,9 +13,18 @@ function fetchModule(e, url, title, disableHistory) {
 	if (previousModule.length > 0)
 		previousModule[0].classList.remove("current")
 
-	console.log(e.target)
-	console.log(e.target.classList)
-	e.target.classList.add("current");
+	try {
+		e.target.classList.add("current");
+	} catch (error) {
+		try {
+			const links = document.getElementsByTag('a')
+			for (let i = 0; i < links.length; i++)
+				if (links[i].href === url)
+					links[i].classList.add("current")
+		} catch (error) {
+			console.log('fatality!')
+		}
+	}
 
 	fetch(url)
 		.then(function(response) {
@@ -25,7 +34,7 @@ function fetchModule(e, url, title, disableHistory) {
 			// Get content (not surrounding header, footer, nav, ...)
 			var parser = new DOMParser()
 			var content = parser.parseFromString(html, "text/html")
-			var algoDisplay = content.getElementById('algoDisplay')
+			var algoDisplay = html.getElementById('algoDisplay')
 
 			// Replace in the page
 			document.querySelector('#algoDisplay').innerHTML = algoDisplay.innerHTML
