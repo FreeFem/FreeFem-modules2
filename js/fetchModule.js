@@ -34,7 +34,7 @@ function fetchModule(e, url, title, disableHistory) {
 			// Get content (not surrounding header, footer, nav, ...)
 			var parser = new DOMParser()
 			var content = parser.parseFromString(html, "text/html")
-			var algoDisplay = html.getElementById('algoDisplay')
+			var algoDisplay = content.getElementById('algoDisplay')
 
 			// Replace in the page
 			document.querySelector('#algoDisplay').innerHTML = algoDisplay.innerHTML
