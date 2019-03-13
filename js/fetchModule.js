@@ -22,7 +22,7 @@ function fetchModule(e, url, title, disableHistory) {
 				if (links[i].href === url)
 					links[i].classList.add("current")
 		} catch (error) {
-			console.log('fatality!')
+			console.error('fatality!')
 		}
 	}
 
