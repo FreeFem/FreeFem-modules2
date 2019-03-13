@@ -17,12 +17,13 @@ function fetchModule(e, url, title, disableHistory) {
 		e.target.classList.add("current");
 	} catch (error) {
 		try {
-			const links = document.getElementsByTag('a')
+			const links = document.getElementsByTagName('a')
 			for (let i = 0; i < links.length; i++)
 				if (links[i].href === url)
 					links[i].classList.add("current")
 		} catch (error) {
 			console.error('fatality!')
+			console.error(error)
 		}
 	}
 
