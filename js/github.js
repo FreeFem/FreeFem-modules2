@@ -1,5 +1,5 @@
 const githubOrganization = 'FreeFem'
-const githubRepository = 'FreeFem-sources'
+const githubRepository = 'FreeFem-modules'
 
 function HTTPGet(url, callback) {
    const xhr = new XMLHttpRequest()
