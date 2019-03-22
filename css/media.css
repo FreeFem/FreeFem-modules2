@@ -30,7 +30,7 @@
 
   #sideNavigation {
     width: unset !important;
-    max-height: 15vh !important;
+    max-height: 25vh !important;
     position: unset !important;
     overflow: auto;
     border-bottom: 0.125rem solid #EFEFEF;
