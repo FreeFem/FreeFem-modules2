@@ -24,6 +24,10 @@
 
 /** FOR MOBILE PHONES **/
 @media screen and (max-width:600px) {
+  header img {
+    margin-right: 0 !important;
+  }
+
   #main {
     flex-direction: column !important;
   }
