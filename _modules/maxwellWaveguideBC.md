@@ -42,7 +42,7 @@ $$
 \int_{dS_{port}} curl \mathbf{E} \mathbf{V} =  \sum_{s=1,N_{modes}} \frac{1}{N_s} \int_{S_{port}} dS ( \mathbf{E} \times \mathbf{H_s} - \mathbf{E_s} \times \mathbf{H}) \bigotimes \int_{dS} curl \mathbf{E_s} \mathbf{V},
 $$
 
-that allows one to implement it by means of FreeFem++ tools without low-level matrix assembly (for the price of performance, of course).
+that allows one to implement it by means of FreeFEM tools without low-level matrix assembly (for the price of performance, of course).
 
 ## Algorithms
 
